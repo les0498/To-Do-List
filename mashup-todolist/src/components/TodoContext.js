@@ -3,22 +3,22 @@ import React, { createContext, useReducer, useContext, useRef } from 'react';
 const initialTodos = [
   {
     id: 1,
-    text: '코테 문제 풀기',
+    text: '아침 9시 기상하기',
     done: true
   },
   {
     id: 2,
-    text: 'TodoList main기능 구현하기',
+    text: '프로젝트 시작하기',
     done: true
   },
   {
     id: 3,
-    text: '카공하기',
+    text: '기능 구현하기',
     done: false
   },
   {
     id: 4,
-    text: '헬스장 가기',
+    text: '운동 하기',
     done: false
   },
 ];
@@ -51,7 +51,7 @@ export function TodoProvider({ children }) {
     <TodoStateContext.Provider value={state}>
       <TodoDispatchContext.Provider value={dispatch}>
         <TodoNextIdContext.Provider value={nextId}>
-        {children}
+          {children}
         </TodoNextIdContext.Provider>
       </TodoDispatchContext.Provider>
     </TodoStateContext.Provider>
