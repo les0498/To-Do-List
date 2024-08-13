@@ -1,6 +1,7 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import { useTodoState } from './TodoContext';
 
 
 const TodoHeadBlock = styled.div`
@@ -28,6 +29,9 @@ const TodoHeadBlock = styled.div`
 `;
 
 function TodoHead() {
+  const todos = useTodoState();
+  const undoneTasks = todos.filter(todo => !todo.done);
+
   // 현재 날짜 생성 
   const today = new Date(); 
   // 날짜를 원하는 형식으로 변환
@@ -40,11 +44,13 @@ function TodoHead() {
   const dayNames = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
   const dayName = dayNames[today.getDay()]; 
 
+
+
   return (
     <TodoHeadBlock>
       <h1>{dateString}</h1>
       <div className='day'>{dayName}</div>
-      <div className='tasks-left'>할 일 2개 남음</div>
+      <div className='tasks-left'>할 일 {undoneTasks.length}개 남음</div>
     </TodoHeadBlock>
   );
 }
