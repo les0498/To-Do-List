@@ -9,7 +9,7 @@ import { TodoProvider } from './components/TodoContext';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background: #e9ecef;
+    background: #FDFDF2;
   }
 `;
 
