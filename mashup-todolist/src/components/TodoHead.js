@@ -3,7 +3,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { useTodoState } from './TodoContext';
 
-
 const TodoHeadBlock = styled.div`
   padding-top: 30px;
   padding-left: 32px;
@@ -16,14 +15,15 @@ const TodoHeadBlock = styled.div`
     color: #343a40;
   }
   .day {
-    margin-top: 4px;
+    margin-top: 6px;
     color: #868e96;
     font-size: 15px;
+    font-weight: bold;
   }
   .tasks-left {
     margin-top: 25px;
     font-size: 12px;
-    color: #20c997;
+    color: #2ECCFA;
     font-weight: bold;
   }
 `;
