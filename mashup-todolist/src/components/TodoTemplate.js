@@ -1,7 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import starImage from '../img/star.jpg'; 
+
 
 const TodoTemplateBlock = styled.div`
+  background-image: url(${starImage}); 
+  background-size: cover;
   width: 300px;
   height: 600px;
 
@@ -19,7 +23,9 @@ const TodoTemplateBlock = styled.div`
 `;
 
 function TodoTemplate({children})  {
-  return <TodoTemplateBlock>{children}</TodoTemplateBlock>;
+  return <TodoTemplateBlock>
+            {children}
+          </TodoTemplateBlock>
 }
 
 export default TodoTemplate;
